@@ -1,0 +1,73 @@
+.discover__container .section__subheader {
+  margin-block: 1rem;
+}
+.discover__gird {
+  display: grid;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+.discover__card {
+  display: grid;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+.discover__card img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.discover__card__content h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-dark);
+}
+.discover__card__content h3 {
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+.discover__card__content h3 span {
+  color: var(--text-light);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.discover__card__btn {
+  text-align: center;
+}
+@media (width > 540px) {
+  .discover__card img {
+    height: 300px;
+  }
+}
+@media (width > 768px) {
+  .discover__container :is(.section__header, .section__subheader) {
+    text-align: left;
+    max-width: 600px;
+  }
+  .discover__card {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .discover__card img {
+    height: 350px;
+  }
+
+  .discover__card:nth-child(2) .discover__card__content {
+    order: -1;
+  }
+  .discover__card__content
+    :is(h4, .section__description, h3, .discover__card__btn) {
+    text-align: left;
+  }
+}
+
+@media (width > 1024px) {
+  .discover__card {
+    gap: 4rem;
+  }
+}
